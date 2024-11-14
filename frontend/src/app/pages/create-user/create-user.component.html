@@ -1,0 +1,36 @@
+
+<div class="d-flex justify-content-center">
+<div class="col-6 px-5 py-5 mt-5 border">
+<form>
+    <div data-mdb-input-init class="form-outline mb-4">
+        <h2>Add User</h2>
+    </div>
+    <!-- Email input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form1Example1">Username</label>
+        <input type="text" class="form-control" name="username" placeholder="savvy" [(ngModel)]="userObj.username" />
+    </div>
+
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form1Example1">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="savvy@gmail.com" [(ngModel)]="userObj.email" />
+    </div>
+  
+    <!-- Password input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form1Example2">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="savvy3293" [(ngModel)]="userObj.password" />
+    </div>
+  
+  
+    <!-- Submit button -->
+    <div data-mdb-input-init class="form-outline mb-4 d-flex justify-content-center">
+        @if(userId) {
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block col-6" (click)="onUpdate()">Update</button>
+        }@else {
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block col-6" (click)="onClick()">Create</button>
+        }
+    </div>
+  </form>
+</div>
+</div>

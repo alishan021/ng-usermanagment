@@ -1,0 +1,31 @@
+
+<div class="d-flex justify-content-center">
+    <div class="col-6 bg-secondary home-backgound">
+        <div class="h2-div d-flex justify-content-center my-5">
+            <h2>User Profile</h2>
+        </div>
+        <form >
+            <div class="px-5">
+                <div class="d-flex flex-column user-input">
+                    <img class="profile-circle">
+                <span><b>{{ user.username }}</b></span>
+            </div>
+            <div class="user-input">
+                <label for="username">Username {{ name }}</label><br>
+                <input type="text" name="username" class="w-100" [(ngModel)]="user.username">
+            </div>
+            <div class="user-input">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" class="w-100" [(ngModel)]="user.email">
+            </div>
+            <div class="user-input">
+                <label for="password">Password</label><br>
+                <input type="password" name="password" class="w-100" [(ngModel)]="user.password">
+            </div>
+            <div class="user-input">
+                <button (click)="onCreateUserClick(userData._id)">Update User</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
